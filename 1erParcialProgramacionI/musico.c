@@ -95,7 +95,7 @@ int mus_baja(Musico *arrayMusico, Instrumento *arrayInstrumento, int cantidadMus
     int retorno = -1;
     int posicionMusico;
     mus_mostrarArray(arrayMusico, arrayInstrumento, cantidadMusico, cantidadInstrumento);
-    switch (mus_buscarEnArrayPorId(arrayMusico, cantidadMusico,&posicionMusico,"Ingrese el codigo de musor a dar de baja: "))
+    switch (mus_buscarEnArrayPorId(arrayMusico, cantidadMusico,&posicionMusico,"Ingrese el codigo del musico a dar de baja: "))
     {
     case 0:
         if (arrayMusico[posicionMusico].isEmpty == 0)
@@ -152,7 +152,7 @@ void mus_mostrarArray(Musico *arrayMusico, Instrumento *arrayInstrumento, int ca
     }
 }
 
-int mus_modificacion(Musico *arrayMusico, Instrumento *arrayInstrumento, int cantidadMusico, int cantidadInstrumento)
+int mus_modificacion(Musico *arrayMusico, Instrumento *arrayInstrumento, Orquesta *arrayOrquesta, int cantidadMusico, int cantidadInstrumento, int cantidadOrquesta)
 {
 
     int retorno = -1;
@@ -197,6 +197,7 @@ int mus_modificacion(Musico *arrayMusico, Instrumento *arrayInstrumento, int can
                         break;
 
                     case 3:
+                         orq_mostrarArray(arrayOrquesta, cantidadOrquesta);
                          if (utn_getUnsignedInt("Ingrese el nuevo ID de Orquesta: " ,"Error, vuelva a ingresar\n\n",1,50,2, &arrayMusico[posicionMusico].idOrquesta)==0)
                             {
                                 printf("El dato fue modificado con exito.\n\n");

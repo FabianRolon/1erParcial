@@ -106,7 +106,7 @@ int main()
             printf("\n\n9-Alta Musico");
             printf("\n\n10-Baja Musico");
             printf("\n\n11-Modificar Musico");
-            printf("\n\n12-Listar instrumentos");
+            printf("\n\n12-Listar Musicos");
             printf("\n\n13-Salir\n");
 
             utn_getUnsignedInt("\n\t\tIngrese opcion: ","Ingreso incorrecto\n",1,12,2,&opcion);
@@ -202,7 +202,7 @@ int main()
                     }
                 break;
             case 11:
-                mus_modificacion(musico, instrumento, CANTIDAD_MUSICO, CANTIDAD_INSTRUMENTO);
+                mus_modificacion(musico, instrumento, orquesta, CANTIDAD_MUSICO, CANTIDAD_INSTRUMENTO, CANTIDAD_ORQUESTA);
                 break;
             case 12:
                 do

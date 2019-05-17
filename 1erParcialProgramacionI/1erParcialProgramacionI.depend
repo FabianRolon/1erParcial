@@ -8,7 +8,7 @@
 	"instrumento.h"
 	"utn.h"
 
-1558053856 source:/home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/main.c
+1558054486 source:/home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/main.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -40,7 +40,7 @@
 	"musico.h"
 	"utn.h"
 
-1558053753 source:/home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/musico.c
+1558054556 source:/home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/musico.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -51,7 +51,7 @@
 	"musico.h"
 	"utn.h"
 
-1558053633 /home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/musico.h
+1558054473 /home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/musico.h
 	"instrumento.h"
 	"orquesta.h"
 
