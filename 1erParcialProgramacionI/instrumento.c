@@ -81,7 +81,7 @@ int ins_buscarEnArrayPorId (Instrumento *arrayInstrumento, int idInstrumento, in
                 break;
             }
         }
-    }
+
     return retorno;
 }
 

@@ -46,11 +46,12 @@ int mus_alta(Musico *arrayMusico, Instrumento *arrayInstrumento, Orquesta *array
 
     if (    utn_getName("\n\nIngrese el nombre : ","Error, vuelva a ingresar\n\n",2,30,2, arrayMusico[posLibre].nombre) == 0 &&
             utn_getName("\n\nIngrese el apellido: ","Error, vuelva a ingresar\n\n",2,30,2, arrayMusico[posLibre].apellido) == 0 &&
-            utn_getUnsignedInt("\n\nIngrese la edad: ","Error, vuelva a ingresar\n\n",18,150,2,&arrayMusico[posLibre].edad) == 0)
+            utn_getUnsignedInt("\n\nIngrese la edad: ","Error, vuelva a ingresar\n\n",1,9,2,&arrayMusico[posLibre].edad) == 0)
         {
            ins_mostrarArray(arrayInstrumento, cantidadInstrumento);
             if(utn_getUnsignedInt("\n\nIngrese ID de instrumento: ","Error, vuelva a ingresar\n\n",1,20,2,&arrayMusico[posLibre].idInstrumento) == 0)
             {
+                orq_mostrarArray(arrayOrquesta, cantidadOrquesta);
                 if(utn_getUnsignedInt("\n\nIngrese ID de Orquesta: ","Error, vuelva a ingresar\n\n",1,50,2,&arrayMusico[posLibre].idOrquesta) == 0)
                 {
                     arrayMusico[posLibre].idMusico = id;
@@ -89,20 +90,19 @@ int mus_buscarEnArrayPorId (Musico *arrayMusico, int cantidad, int *musuestaEnco
     return retorno;
 }
 
-int mus_baja(Musico *arrayMusico, int cantidad)
+int mus_baja(Musico *arrayMusico, Instrumento *arrayInstrumento, int cantidadMusico, int cantidadInstrumento)
 {
     int retorno = -1;
     int posicionMusico;
-
-    mus_mostrarArray(arrayMusico, cantidad);
-    switch (mus_buscarEnArrayPorId(arrayMusico, cantidad,&posicionMusico,"Ingrese el codigo de musor a dar de baja: "))
+    mus_mostrarArray(arrayMusico, arrayInstrumento, cantidadMusico, cantidadInstrumento);
+    switch (mus_buscarEnArrayPorId(arrayMusico, cantidadMusico,&posicionMusico,"Ingrese el codigo de musor a dar de baja: "))
     {
     case 0:
         if (arrayMusico[posicionMusico].isEmpty == 0)
         {
             printf("Hubo coincidencia\n\n");
             arrayMusico[posicionMusico].isEmpty = 2;
-            printf("La musuesta borrada es: %d\n\n",arrayMusico[posicionMusico].idMusico);
+            printf("El musico borrado es: %d\n\n",arrayMusico[posicionMusico].idMusico);
             retorno = 0;
         }
         break;
@@ -120,7 +120,7 @@ void mus_mostrarArray(Musico *arrayMusico, Instrumento *arrayInstrumento, int ca
 
     printf("\n\n\t\t\t\t||Lista de Musicos||\n\n");
 
-    for (i = 0; i < cantidad ;i++)
+    for (i = 0; i < cantidadMusico ;i++)
     {
         if(arrayMusico[i].isEmpty == 0)
         {
@@ -150,4 +150,112 @@ void mus_mostrarArray(Musico *arrayMusico, Instrumento *arrayInstrumento, int ca
 
         }
     }
+}
+
+int mus_modificacion(Musico *arrayMusico, Instrumento *arrayInstrumento, int cantidadMusico, int cantidadInstrumento)
+{
+
+    int retorno = -1;
+    int opcion;
+    int posicionMusico;
+    char seguir = 's';
+
+   mus_mostrarArray2(arrayMusico, cantidadMusico);
+
+    switch (mus_buscarEnArrayPorId2(arrayMusico, cantidadMusico,&posicionMusico,"Ingrese el ID de musico a modificar: "))
+    {
+    case 0:
+        if (arrayMusico[posicionMusico].isEmpty == 0)
+        {
+            printf("Hubo coincidencia\n\n");
+
+            while(seguir == 's')
+            {
+                printf("Elija el dato que desea modificar\n\n");
+
+                printf("\n\n1-Nombre");
+                printf("\n\n2-Edad");
+                printf("\n\n2-ID Orquesta");
+                printf("\n\n4-Salir de la modificacion");
+
+                utn_getUnsignedInt("\n\t\tIngrese opcion: ", "Ingreso incorrecto\n", 1, 3, 2, &opcion);
+
+
+                switch(opcion)
+                {
+                    case 1:
+                        if (getString("Ingrese el nuevo nombre de musico: ","Error",2,20,2, arrayMusico[posicionMusico].nombre)==0)
+                        {
+                            printf("El dato fue modificado con exito.\n\n");
+                        }
+                        break;
+                    case 2:
+                        if (utn_getUnsignedInt("Ingrese la nueva edad: " ,"Error, vuelva a ingresar\n\n",1,9,2, &arrayMusico[posicionMusico].edad)==0)
+                        {
+                            printf("El dato fue modificado con exito.\n\n");
+                        }
+                        break;
+
+                    case 3:
+                         if (utn_getUnsignedInt("Ingrese el nuevo ID de Orquesta: " ,"Error, vuelva a ingresar\n\n",1,50,2, &arrayMusico[posicionMusico].idOrquesta)==0)
+                            {
+                                printf("El dato fue modificado con exito.\n\n");
+                            }
+
+                        break;
+
+                    case 4:
+                        seguir = 'n';
+                        retorno = 0;
+                        break;
+                }
+            }
+        }
+        break;
+
+    case 1:
+        printf("No se encontro el ID");
+        break;
+        }
+
+    return retorno;
+}
+
+void mus_mostrarArray2(Musico *arrayMusico, int cantidad)
+{
+    int i;
+
+    printf("\n\n\t\t\t\t||Lista de Musicos||\n\n");
+
+    for (i = 0; i < cantidad ;i++)
+    {
+        if(arrayMusico[i].isEmpty == 0)
+        {
+
+            printf("ID de Musico: %d\n", arrayMusico[i].idMusico);
+            printf("Nombre: %s\n", arrayMusico[i].nombre);
+            printf("Apellido: %s\n\n", arrayMusico[i].apellido);
+        }
+    }
+}
+
+int mus_buscarEnArrayPorId2 (Musico *arrayMusico, int cantidad, int *musicoEncontrado,char *textoAMostrar)
+{
+    int i;
+    int retorno = 1;
+    Musico auxMusico;
+
+    if (utn_getUnsignedInt(textoAMostrar, "Ingreso incorrecto\n", 0, 100, 2, &auxMusico.idMusico) == 0)
+    {
+        for(i=0; i < cantidad; i++)
+        {
+            if (arrayMusico[i].idMusico == auxMusico.idMusico)
+            {
+                retorno=0;
+                *musicoEncontrado=i;
+                break;
+            }
+        }
+    }
+    return retorno;
 }

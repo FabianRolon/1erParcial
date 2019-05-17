@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1558048415 source:/home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/instrumento.c
+1558051866 source:/home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/instrumento.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -8,7 +8,7 @@
 	"instrumento.h"
 	"utn.h"
 
-1558050875 source:/home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/main.c
+1558053856 source:/home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/main.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -20,9 +20,9 @@
 
 1558046222 /home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/orquesta.h
 
-1558048844 /home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/instrumento.h
+1558051853 /home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/instrumento.h
 
-1558047563 source:/home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/utn.c
+1558052209 source:/home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/utn.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -40,7 +40,7 @@
 	"musico.h"
 	"utn.h"
 
-1558050378 source:/home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/musico.c
+1558053753 source:/home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/musico.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -51,7 +51,7 @@
 	"musico.h"
 	"utn.h"
 
-1558050243 /home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/musico.h
+1558053633 /home/alumno/Documentos/Rolon/practicaProgramacionI/1erParcialProgramacionI/musico.h
 	"instrumento.h"
 	"orquesta.h"
 

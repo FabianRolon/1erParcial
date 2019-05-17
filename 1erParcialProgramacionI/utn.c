@@ -118,7 +118,7 @@ int utn_getUnsignedInt(char* msg,char* msgError,int min,int max,int reintentos,i
                 }
                 else
                 {
-                    printf("%s 2",msgError);
+                    printf("%s",msgError);
                     reintentos--;
                 }
             }

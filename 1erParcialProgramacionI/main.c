@@ -18,6 +18,7 @@ int main()
     char seguir = 's';
     char salirListaOrquesta = 'n';
     char salirListaInstrumento = 'n';
+    char salirListaMusicos = 'n';
     int opcion;
     int valor1;
     int valor2;
@@ -105,7 +106,8 @@ int main()
             printf("\n\n9-Alta Musico");
             printf("\n\n10-Baja Musico");
             printf("\n\n11-Modificar Musico");
-            printf("\n\n12-Salir\n");
+            printf("\n\n12-Listar instrumentos");
+            printf("\n\n13-Salir\n");
 
             utn_getUnsignedInt("\n\t\tIngrese opcion: ","Ingreso incorrecto\n",1,12,2,&opcion);
             system("clear");
@@ -194,15 +196,23 @@ int main()
                 }
                 break;
             case 10:
-                if (mus_baja(musico, CANTIDAD_MUSICO) == 0)
+                if (mus_baja(musico, instrumento, CANTIDAD_MUSICO, CANTIDAD_INSTRUMENTO) == 0)
                     {
                         printf("Exito");
                     }
                 break;
             case 11:
-
+                mus_modificacion(musico, instrumento, CANTIDAD_MUSICO, CANTIDAD_INSTRUMENTO);
                 break;
             case 12:
+                do
+                {
+                    mus_mostrarArray(musico,instrumento, CANTIDAD_MUSICO,CANTIDAD_INSTRUMENTO);
+                    utn_getChar("\n\tIngrese 's' para volver al menu anterior: ", "Ingreso incorrecto",1,2,2,&salirListaMusicos);
+
+                }while(salirListaMusicos!='s');
+                break;
+            case 13:
                 seguir = 'a';
                 break;
             }
