@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include "orquesta.h"
 #include "instrumento.h"
 #include "utn.h"
@@ -133,7 +133,7 @@ int main()
                 }
                 break;
             case 2:
-                if (orq_baja(orquesta, CANTIDAD_ORQUESTA) == 0)
+                if (orq_baja(orquesta, musico, CANTIDAD_ORQUESTA, CANTIDAD_MUSICO) == 0)
                 {
                     printf("Exito");
                 }

@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include <ctype.h>
 #include "instrumento.h"
 #include "utn.h"

@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include <ctype.h>
 #include "instrumento.h"
 #include "orquesta.h"
@@ -257,6 +257,38 @@ int mus_buscarEnArrayPorId2 (Musico *arrayMusico, int cantidad, int *musicoEncon
                 break;
             }
         }
+    }
+    return retorno;
+}
+
+int orq_baja(Orquesta *arrayOrquesta, Musico *arrayMusico, int cantidadOrquesta, int cantidadMusico)
+{
+    int retorno = -1;
+    int posicionOrquesta;
+    int i;
+
+    orq_mostrarArray(arrayOrquesta, cantidadOrquesta);
+    switch (orq_buscarEnArrayPorId(arrayOrquesta, cantidadOrquesta,&posicionOrquesta,"Ingrese el Id de orquesta a dar de baja: "))
+    {
+    case 0:
+        if (arrayOrquesta[posicionOrquesta].isEmpty == 0)
+        {
+            for(i=0;i<cantidadMusico;i++)
+            {
+                if(arrayMusico[i].idOrquesta == arrayOrquesta[posicionOrquesta].idOrquesta)
+                {
+                    arrayMusico[i].isEmpty = 1;
+                }
+            }
+            printf("Hubo coincidencia\n\n");
+            arrayOrquesta[posicionOrquesta].isEmpty = 2;
+            printf("La orquesta borrada es: %d\n\n",arrayOrquesta[posicionOrquesta].idOrquesta);
+            retorno = 0;
+        }
+        break;
+    case 1:
+        printf("No se encontro el codigo\n\n");
+        break;
     }
     return retorno;
 }

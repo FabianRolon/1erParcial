@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include <ctype.h>
 #include "musico.h"
 #include "utn.h"
@@ -87,29 +87,7 @@ int orq_buscarEnArrayPorId (Orquesta *arrayOrquesta, int cantidad, int *orquesta
     return retorno;
 }
 
-int orq_baja(Orquesta *arrayOrquesta, int cantidad)
-{
-    int retorno = -1;
-    int posicionOrquesta;
 
-    orq_mostrarArray(arrayOrquesta, cantidad);
-    switch (orq_buscarEnArrayPorId(arrayOrquesta, cantidad,&posicionOrquesta,"Ingrese el codigo de orqor a dar de baja: "))
-    {
-    case 0:
-        if (arrayOrquesta[posicionOrquesta].isEmpty == 0)
-        {
-            printf("Hubo coincidencia\n\n");
-            arrayOrquesta[posicionOrquesta].isEmpty = 2;
-            printf("La orquesta borrada es: %d\n\n",arrayOrquesta[posicionOrquesta].idOrquesta);
-            retorno = 0;
-        }
-        break;
-    case 1:
-        printf("No se encontro el codigo\n\n");
-        break;
-    }
-    return retorno;
-}
 
 void orq_mostrarArray(Orquesta *arrayOrquesta, int cantidad)
 {

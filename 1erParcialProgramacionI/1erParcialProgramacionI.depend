@@ -55,3 +55,54 @@
 	"instrumento.h"
 	"orquesta.h"
 
+1558197014 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\instrumento.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"instrumento.h"
+	"utn.h"
+
+1558196864 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\instrumento.h
+
+1558196864 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\utn.h
+
+1558197424 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"orquesta.h"
+	"instrumento.h"
+	"utn.h"
+	"musico.h"
+
+1558197366 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\orquesta.h
+
+1558196864 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\musico.h
+	"instrumento.h"
+	"orquesta.h"
+
+1558197032 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\orquesta.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"musico.h"
+	"utn.h"
+
+1558197049 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1558197386 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\musico.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"instrumento.h"
+	"orquesta.h"
+	"musico.h"
+	"utn.h"
+
