@@ -106,3 +106,59 @@
 	"musico.h"
 	"utn.h"
 
+1558227972 source:/home/fabianrolon/Documentos/1erParcial/1erParcialProgramacionI/instrumento.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio_ext.h>
+	<ctype.h>
+	"instrumento.h"
+	"utn.h"
+
+1558227844 /home/fabianrolon/Documentos/1erParcial/1erParcialProgramacionI/instrumento.h
+
+1558227844 /home/fabianrolon/Documentos/1erParcial/1erParcialProgramacionI/utn.h
+
+1558229289 source:/home/fabianrolon/Documentos/1erParcial/1erParcialProgramacionI/main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio_ext.h>
+	"orquesta.h"
+	"instrumento.h"
+	"utn.h"
+	"musico.h"
+
+1558228038 /home/fabianrolon/Documentos/1erParcial/1erParcialProgramacionI/orquesta.h
+
+1558228038 /home/fabianrolon/Documentos/1erParcial/1erParcialProgramacionI/musico.h
+	"instrumento.h"
+	"orquesta.h"
+
+1558227972 source:/home/fabianrolon/Documentos/1erParcial/1erParcialProgramacionI/orquesta.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio_ext.h>
+	<ctype.h>
+	"musico.h"
+	"utn.h"
+
+1558227972 source:/home/fabianrolon/Documentos/1erParcial/1erParcialProgramacionI/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio_ext.h>
+	"utn.h"
+
+1558227903 source:/home/fabianrolon/Documentos/1erParcial/1erParcialProgramacionI/musico.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio_ext.h>
+	<ctype.h>
+	"instrumento.h"
+	"orquesta.h"
+	"musico.h"
+	"utn.h"
+

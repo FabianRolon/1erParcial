@@ -27,3 +27,4 @@ int mus_modificacion(Musico *arrayMusico, Instrumento *arrayInstrumento, Orquest
 int mus_existeId (Musico *arrayMusico, int cantidad, int id);
 void mus_mostrarArray2(Musico *arrayMusico, int cantidad);
 int mus_buscarEnArrayPorId2 (Musico *arrayMusico, int cantidad, int *musicoEncontrado,char *textoAMostrar);
+int orq_baja(Orquesta *arrayOrquesta, Musico *arrayMusico, int cantidadOrquesta, int cantidadMusico);

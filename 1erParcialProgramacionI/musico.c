@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-//#include <stdio_ext.h>
+#include <stdio_ext.h>
 #include <ctype.h>
 #include "instrumento.h"
 #include "orquesta.h"
@@ -125,13 +125,13 @@ void mus_mostrarArray(Musico *arrayMusico, Instrumento *arrayInstrumento, int ca
         if(arrayMusico[i].isEmpty == 0)
         {
 
-            printf("ID de Musico: %d\n", arrayMusico[i].idMusico);
+            printf("\nID de Musico: %d\n", arrayMusico[i].idMusico);
             printf("Posicion: %d\n", i);
             printf("Estado: %d\n", arrayMusico[i].isEmpty);
             printf("Nombre: %s\n", arrayMusico[i].nombre);
-            printf("Apellido: %s\n\n", arrayMusico[i].apellido);
+            printf("Apellido: %s\n", arrayMusico[i].apellido);
             ins_buscarEnArrayPorId (arrayInstrumento, arrayMusico[i].idInstrumento, cantidadInstrumento, &posicionInstrumento);
-            printf("Nombre de Instrumento: %s\n\n", arrayInstrumento[posicionInstrumento].nombre);
+            printf("Nombre de Instrumento: %s\n", arrayInstrumento[posicionInstrumento].nombre);
             switch(arrayInstrumento[posicionInstrumento].tipo)
             {
                 case 1:
@@ -275,14 +275,14 @@ int orq_baja(Orquesta *arrayOrquesta, Musico *arrayMusico, int cantidadOrquesta,
         {
             for(i=0;i<cantidadMusico;i++)
             {
-                if(arrayMusico[i].idOrquesta == arrayOrquesta[posicionOrquesta].idOrquesta)
+                if(arrayMusico[i].idOrquesta == arrayOrquesta[posicionOrquesta].idOrquesta && arrayMusico[i].isEmpty == 0)
                 {
-                    arrayMusico[i].isEmpty = 1;
+                    arrayMusico[i].isEmpty = 2;
                 }
             }
             printf("Hubo coincidencia\n\n");
             arrayOrquesta[posicionOrquesta].isEmpty = 2;
-            printf("La orquesta borrada es: %d\n\n",arrayOrquesta[posicionOrquesta].idOrquesta);
+            printf("La orquesta borrada junto con sus musicos es: %d\n\n",arrayOrquesta[posicionOrquesta].idOrquesta);
             retorno = 0;
         }
         break;

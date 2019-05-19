@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-//#include <stdio_ext.h>
+#include <stdio_ext.h>
 #include "orquesta.h"
 #include "instrumento.h"
 #include "utn.h"
@@ -91,6 +91,42 @@ int main()
     strcpy(instrumento[3].nombre,"Violin");
     instrumento[3].tipo = 1;
     generadorCodigoInstrumento++;
+
+    musico[0].idMusico=1;
+    musico[0].isEmpty=0;
+    strcpy(musico[0].nombre,"Fabian");
+    strcpy(musico[0].apellido,"Rolon");
+    musico[0].edad = 30;
+    musico[0].idOrquesta = 1;
+    musico[0].idInstrumento = 1;
+    generadorCodigoMusico++;
+
+    musico[1].idMusico=2;
+    musico[1].isEmpty=0;
+    strcpy(musico[1].nombre,"Marcelo");
+    strcpy(musico[1].apellido,"Menendez");
+    musico[1].edad = 52;
+    musico[1].idOrquesta = 2;
+    musico[1].idInstrumento = 4;
+    generadorCodigoMusico++;
+
+    musico[2].idMusico=3;
+    musico[2].isEmpty=0;
+    strcpy(musico[2].nombre,"Lucas");
+    strcpy(musico[2].apellido,"Barua");
+    musico[2].edad = 33;
+    musico[2].idOrquesta = 3;
+    musico[2].idInstrumento = 2;
+    generadorCodigoMusico++;
+
+    musico[3].idMusico=4;
+    musico[3].isEmpty=0;
+    strcpy(musico[3].nombre,"Leandro");
+    strcpy(musico[3].apellido,"Gonzales");
+    musico[3].edad = 27;
+    musico[3].idOrquesta = 1;
+    musico[3].idInstrumento = 3;
+    generadorCodigoMusico++;
 
         while (seguir == 's')
         {
