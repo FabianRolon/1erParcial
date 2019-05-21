@@ -1,11 +1,12 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include <ctype.h>
 #include "instrumento.h"
 #include "orquesta.h"
 #include "musico.h"
+#include "informes.h"
 #include "utn.h"
 
 /** \brief Ordena por campo XXXXX los elementos de un array ante la igualdad de estos ordena por el campo ZZZZZZ
@@ -64,13 +65,13 @@ int inf_contadorMusicosOrquesta(ContadorMusicos *arrayContadorMusicos, Orquesta 
     int j;
     int posicionArrayContador = 0;
 
-    if(arrayContadorMusicos != NULL && arrayMusico != NULL && arrayOrquestao != NULL)
+    if(arrayContadorMusicos != NULL && arrayMusico != NULL && arrayOrquesta != NULL)
     {
         for(i = 0; i<cantidadOrquesta; i++)
         {
             if(arrayOrquesta[i].isEmpty == 0)
             {
-                arrayContadorMusicos[posicionArrayContador].idOrquesta = arrayOrquesta.idOrquesta;
+                arrayContadorMusicos[posicionArrayContador].idOrquesta = arrayOrquesta[i].idOrquesta;
 
                 for(j = 0;j<cantidadMusico;j++)
                 {
