@@ -58,6 +58,20 @@ int musico_ordenarPorDobleCriterio(Musico *arrayMusico,int size, int orderFirst,
     return retorno;
 }
 
+int inf_Inicializar(ContadorMusicos *arrayContadorMusico, int cantidad)
+{
+    int retorno = -1;
+    int i;
+
+    for (i = 0; i < cantidad; i++)
+    {
+        arrayContadorMusico[i].cantMusico = 0;
+        retorno=0;
+    }
+
+    return retorno;
+}
+
 int inf_contadorMusicosOrquesta(ContadorMusicos *arrayContadorMusicos, Orquesta *arrayOrquesta, Musico *arrayMusico, int cantidadMusico, int cantidadOrquesta)
 {
     int retorno = -1;
