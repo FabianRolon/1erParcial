@@ -151,7 +151,18 @@
 	<stdio_ext.h>
 	"utn.h"
 
-1558227903 source:/home/fabianrolon/Documentos/1erParcial/1erParcialProgramacionI/musico.c
+1558229340 source:/home/fabianrolon/Documentos/1erParcial/1erParcialProgramacionI/musico.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio_ext.h>
+	<ctype.h>
+	"instrumento.h"
+	"orquesta.h"
+	"musico.h"
+	"utn.h"
+
+1558398557 source:/home/fabianrolon/Documentos/1erParcial/1erParcialProgramacionI/informes.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>

@@ -6,6 +6,7 @@
 #include "instrumento.h"
 #include "utn.h"
 #include "musico.h"
+#include "informes.h"
 #define CANTIDAD_ORQUESTA 50
 #define CANTIDAD_INSTRUMENTO 20
 #define CANTIDAD_MUSICO 1000
@@ -19,7 +20,9 @@ int main()
     char salirListaOrquesta = 'n';
     char salirListaInstrumento = 'n';
     char salirListaMusicos = 'n';
+    int salirListaInformes = 1;
     int opcion;
+    int opcionInforme;
     int valor1;
     int valor2;
     int valor3;
@@ -143,7 +146,8 @@ int main()
             printf("\n\n10-Baja Musico");
             printf("\n\n11-Modificar Musico");
             printf("\n\n12-Listar Musicos");
-            printf("\n\n13-Salir\n");
+            printf("\n\n13-Informes");
+            printf("\n\n14-Salir\n");
 
             utn_getUnsignedInt("\n\t\tIngrese opcion: ","Ingreso incorrecto\n",1,12,2,&opcion);
             system("clear");
@@ -249,6 +253,24 @@ int main()
                 }while(salirListaMusicos!='s');
                 break;
             case 13:
+                do
+                {
+                    printf("\n1-Ordenar por nombre y apellido ascendente");
+                    printf("\n2-Salir\n\n");
+
+                    utn_getUnsignedInt("\n\t\tIngrese opcion: ","Ingreso incorrecto\n",1,3,2,&opcionInforme);
+                    switch (opcionInforme)
+                    {
+                    case 1:
+                        musico_ordenarPorDobleCriterio(musico, CANTIDAD_MUSICO,1,0);
+                        break;
+                    case 2:
+                        salirListaInformes = 0;
+                        break;
+                    }
+                }while(salirListaInformes);
+                break;
+            case 14:
                 seguir = 'a';
                 break;
             }
