@@ -56,3 +56,34 @@ int musico_ordenarPorDobleCriterio(Musico *arrayMusico,int size, int orderFirst,
     }
     return retorno;
 }
+
+int inf_contadorMusicosOrquesta(ContadorMusicos *arrayContadorMusicos, Orquesta *arrayOrquesta, Musico *arrayMusico, int cantidadMusico, int cantidadOrquesta)
+{
+    int retorno = -1;
+    int i;
+    int j;
+    int posicionArrayContador = 0;
+
+    if(arrayContadorMusicos != NULL && arrayMusico != NULL && arrayOrquestao != NULL)
+    {
+        for(i = 0; i<cantidadOrquesta; i++)
+        {
+            if(arrayOrquesta[i].isEmpty == 0)
+            {
+                arrayContadorMusicos[posicionArrayContador].idOrquesta = arrayOrquesta.idOrquesta;
+
+                for(j = 0;j<cantidadMusico;j++)
+                {
+                    if(arrayMusico[j].isEmpty == 0 && arrayContadorMusicos[posicionArrayContador].idOrquesta == arrayMusico[j].idOrquesta)
+                    {
+                        arrayContadorMusicos[posicionArrayContador].cantMusico++;
+                    }
+                }
+                posicionArrayContador++;
+            }
+
+        }
+        retorno = 0;
+    }
+    return retorno;
+}
