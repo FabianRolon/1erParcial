@@ -39,7 +39,7 @@ int main()
     valor1 = orq_Inicializar(orquesta, CANTIDAD_ORQUESTA);
     valor2 = ins_Inicializar(instrumento, CANTIDAD_INSTRUMENTO);
     valor3 = mus_Inicializar(musico, CANTIDAD_MUSICO);
-    inf_Inicializar(contadorMusico, CANTIDAD_MUSICO);
+    inf_Inicializar(contadorMusico, CANTIDAD_ORQUESTA);
     valor4 = inf_InicializarCantidadMusico(contadorMusico, CANTIDAD_MUSICO);
 
     if (valor1 == 0 && valor2 == 0 && valor3 == 0 && valor4 == 0)
@@ -188,7 +188,9 @@ int main()
                         inf_orquestasDeUnLugar(orquesta, CANTIDAD_ORQUESTA);
                         break;
                     case 'b':
+                        inf_contadorMusicosOrquesta(contadorMusico, orquesta,musico, CANTIDAD_MUSICO, CANTIDAD_ORQUESTA);
                         inf_menosDe25(musico, orquesta, instrumento, CANTIDAD_MUSICO,CANTIDAD_ORQUESTA,CANTIDAD_INSTRUMENTO);
+                        inf_mostrarArrayContadorMusico(contadorMusico, CANTIDAD_ORQUESTA);
                         break;
                     case 'c':
                         inf_contadorMusicosOrquesta(contadorMusico, orquesta,musico, CANTIDAD_MUSICO, CANTIDAD_ORQUESTA);
@@ -199,6 +201,7 @@ int main()
                         menosMusicos(contadorMusico,orquesta,CANTIDAD_ORQUESTA);
                         break;
                     case 'g':
+                        inf_contadorMusicosOrquesta(contadorMusico, orquesta,musico, CANTIDAD_MUSICO, CANTIDAD_ORQUESTA);
                         promedioInstrumentoPorOrquesta(contadorMusico, musico, CANTIDAD_ORQUESTA, CANTIDAD_MUSICO);
                         break;
                     case 'i':

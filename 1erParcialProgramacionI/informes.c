@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdio_ext.h>
+//#include <stdio_ext.h>
 #include <ctype.h>
 #include "instrumento.h"
 #include "orquesta.h"
@@ -22,28 +22,28 @@ void harcodeo(Orquesta *orquesta, Instrumento *instrumento, Musico *musico)
     orquesta[0].idOrquesta=1;
     orquesta[0].isEmpty=0;
     strcpy(orquesta[0].nombre,"Orquesta1");
-    strcpy(orquesta[0].lugar,"Lugar1");
+    strcpy(orquesta[0].lugar,"LugarUno");
     orquesta[0].tipo = 1;
     generadorCodigoOrquesta++;
 
     orquesta[1].idOrquesta=2;
     orquesta[1].isEmpty=0;
     strcpy(orquesta[1].nombre,"Orquesta2");
-    strcpy(orquesta[1].lugar,"Lugar1");
+    strcpy(orquesta[1].lugar,"LugarUno");
     orquesta[1].tipo = 2;
     generadorCodigoOrquesta++;
 
     orquesta[2].idOrquesta=3;
     orquesta[2].isEmpty=0;
     strcpy(orquesta[2].nombre,"Orquesta3");
-    strcpy(orquesta[2].lugar,"Lugar2");
+    strcpy(orquesta[2].lugar,"LugarDos");
     orquesta[2].tipo = 3;
     generadorCodigoOrquesta++;
 
     orquesta[3].idOrquesta=4;
     orquesta[3].isEmpty=0;
     strcpy(orquesta[3].nombre,"Orquesta4");
-    strcpy(orquesta[3].lugar,"Lugar3");
+    strcpy(orquesta[3].lugar,"LugarTres");
     orquesta[3].tipo = 2;
     generadorCodigoOrquesta++;
 
@@ -247,6 +247,7 @@ int inf_orquestasDeUnLugar(Orquesta *arrayOrquesta, int cantidadOrquesta)
 {
     int retorno = -1;
     char auxLugar[30];
+    int auxFlag;
 
     int i;
 
@@ -256,8 +257,10 @@ int inf_orquestasDeUnLugar(Orquesta *arrayOrquesta, int cantidadOrquesta)
     {
         for(i=0;i<cantidadOrquesta;i++)
         {
+            auxFlag = 1;
             if(strcmp(auxLugar, arrayOrquesta[i].lugar) == 0 && arrayOrquesta[i].isEmpty == 0)
             {
+                auxFlag = 0;
                 printf("ID de Orquesta: %d\n", arrayOrquesta[i].idOrquesta);
                 printf("Nombre: %s\n", arrayOrquesta[i].nombre);
                 printf("Lugar: %s\n", arrayOrquesta[i].lugar);
@@ -276,7 +279,8 @@ int inf_orquestasDeUnLugar(Orquesta *arrayOrquesta, int cantidadOrquesta)
             }
             else
             {
-                printf("No hubo coincidencia\n\n");
+                if(!auxFlag)
+                    printf("No hubo coincidencia\n\n");
                 break;
             }
 
@@ -319,7 +323,7 @@ int inf_menosDe25(Musico *arrayMusico, Orquesta *arrayOrquesta, Instrumento *arr
     return retorno;
 }
 
-void inf_mostrarArrayContadorMusico(ContadorMusicos *arrayCantidadMusico, int cantidad)
+void inf_mostrarArrayContadorMusico(ContadorMusicos *arrayContadorMusico, int cantidad)
 {
     int i;
 
@@ -327,11 +331,11 @@ void inf_mostrarArrayContadorMusico(ContadorMusicos *arrayCantidadMusico, int ca
 
     for (i = 0; i < cantidad ;i++)
     {
-        if(arrayCantidadMusico[i].isEmpty == 0)
+        if(arrayContadorMusico[i].isEmpty == 0)
         {
 
-            printf("ID de Orquesta: %d\n", arrayCantidadMusico[i].idOrquesta);
-            printf("Cantidad de musicos: %d\n", arrayCantidadMusico[i].cantMusico);
+            printf("ID de Orquesta: %d\n", arrayContadorMusico[i].idOrquesta);
+            printf("Cantidad de musicos: %d\n", arrayContadorMusico[i].cantMusico);
         }
     }
 }
@@ -456,8 +460,8 @@ int promedioInstrumentoPorOrquesta(ContadorMusicos *arrayContador, Musico *array
             }
         }
 
-        promedio = contadorInstrumentos/contadorInstrumentos;
-        printf("El promedio de instrumentos por orquesta es: %f\n\n", promedio);
+        promedio =(float) contadorInstrumentos/(float)contadorInstrumentos;
+        printf("El promedio de instrumentos por orquesta es: %f\n\n", (float)promedio);
     }
 
     return retorno;

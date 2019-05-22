@@ -55,7 +55,7 @@
 	"instrumento.h"
 	"orquesta.h"
 
-1558467140 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\instrumento.c
+1558545990 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\instrumento.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -63,11 +63,11 @@
 	"instrumento.h"
 	"utn.h"
 
-1558464265 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\instrumento.h
+1558545990 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\instrumento.h
 
-1558464265 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\utn.h
+1558545990 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\utn.h
 
-1558467017 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\main.c
+1558551993 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\main.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -77,13 +77,13 @@
 	"musico.h"
 	"informes.h"
 
-1558464265 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\orquesta.h
+1558545990 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\orquesta.h
 
-1558464265 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\musico.h
+1558545990 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\musico.h
 	"instrumento.h"
 	"orquesta.h"
 
-1558467142 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\orquesta.c
+1558545990 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\orquesta.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -91,13 +91,13 @@
 	"musico.h"
 	"utn.h"
 
-1558467144 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\utn.c
+1558545990 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\utn.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"utn.h"
 
-1558467136 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\musico.c
+1558545990 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\musico.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
@@ -174,9 +174,9 @@
 	"musico.h"
 	"utn.h"
 
-1558467040 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\informes.h
+1558545990 c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\informes.h
 
-1558467104 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\informes.c
+1558551880 source:c:\users\calidad\desktop\programas\program\1erparcial\1erparcialprogramacioni\informes.c
 	<string.h>
 	<stdio.h>
 	<stdlib.h>
