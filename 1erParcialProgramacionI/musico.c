@@ -130,6 +130,7 @@ void mus_mostrarArray(Musico *arrayMusico, Instrumento *arrayInstrumento, int ca
             printf("Estado: %d\n", arrayMusico[i].isEmpty);
             printf("Nombre: %s\n", arrayMusico[i].nombre);
             printf("Apellido: %s\n", arrayMusico[i].apellido);
+            printf("Edad: %d\n", arrayMusico[i].edad);
             ins_buscarEnArrayPorId (arrayInstrumento, arrayMusico[i].idInstrumento, cantidadInstrumento, &posicionInstrumento);
             printf("Nombre de Instrumento: %s\n", arrayInstrumento[posicionInstrumento].nombre);
             switch(arrayInstrumento[posicionInstrumento].tipo)

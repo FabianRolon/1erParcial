@@ -187,3 +187,69 @@
 	"informes.h"
 	"utn.h"
 
+1558474634 source:/home/alumno/Documentos/Rolon/1erParcial/1erParcialProgramacionI/instrumento.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"instrumento.h"
+	"utn.h"
+
+1558474634 /home/alumno/Documentos/Rolon/1erParcial/1erParcialProgramacionI/instrumento.h
+
+1558474634 /home/alumno/Documentos/Rolon/1erParcial/1erParcialProgramacionI/utn.h
+
+1558478328 source:/home/alumno/Documentos/Rolon/1erParcial/1erParcialProgramacionI/musico.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"instrumento.h"
+	"orquesta.h"
+	"musico.h"
+	"utn.h"
+
+1558477453 /home/alumno/Documentos/Rolon/1erParcial/1erParcialProgramacionI/orquesta.h
+
+1558474634 /home/alumno/Documentos/Rolon/1erParcial/1erParcialProgramacionI/musico.h
+	"instrumento.h"
+	"orquesta.h"
+
+1558477453 source:/home/alumno/Documentos/Rolon/1erParcial/1erParcialProgramacionI/orquesta.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"musico.h"
+	"utn.h"
+
+1558478082 source:/home/alumno/Documentos/Rolon/1erParcial/1erParcialProgramacionI/utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+
+1558482739 source:/home/alumno/Documentos/Rolon/1erParcial/1erParcialProgramacionI/main.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"orquesta.h"
+	"instrumento.h"
+	"utn.h"
+	"musico.h"
+	"informes.h"
+
+1558482739 /home/alumno/Documentos/Rolon/1erParcial/1erParcialProgramacionI/informes.h
+
+1558483575 source:/home/alumno/Documentos/Rolon/1erParcial/1erParcialProgramacionI/informes.c
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdio_ext.h>
+	<ctype.h>
+	"instrumento.h"
+	"orquesta.h"
+	"musico.h"
+	"informes.h"
+	"utn.h"
+

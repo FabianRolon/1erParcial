@@ -22,10 +22,11 @@ int main()
     char salirListaMusicos = 'n';
     int salirListaInformes = 1;
     int opcion;
-    int opcionInforme;
+    char opcionInforme = '1';
     int valor1;
     int valor2;
     int valor3;
+    int valor4;
     int posicionLibreOrquesta;
     int posicionLibreInstrumento;
     int posicionLibreMusico;
@@ -33,103 +34,20 @@ int main()
     Orquesta orquesta[CANTIDAD_ORQUESTA];
     Instrumento instrumento[CANTIDAD_INSTRUMENTO];
     Musico musico[CANTIDAD_MUSICO];
+    ContadorMusicos contadorMusico[CANTIDAD_ORQUESTA];
 
     valor1 = orq_Inicializar(orquesta, CANTIDAD_ORQUESTA);
     valor2 = ins_Inicializar(instrumento, CANTIDAD_INSTRUMENTO);
     valor3 = mus_Inicializar(musico, CANTIDAD_MUSICO);
+    inf_Inicializar(contadorMusico, CANTIDAD_MUSICO);
+    valor4 = inf_InicializarCantidadMusico(contadorMusico, CANTIDAD_MUSICO);
 
-    if (valor1 == 0 && valor2 == 0 && valor3 == 0)
+    if (valor1 == 0 && valor2 == 0 && valor3 == 0 && valor4 == 0)
     {
         printf("Sistema inicializado correctamente\n\n\n");
     }
 
-    orquesta[0].idOrquesta=1;
-    orquesta[0].isEmpty=0;
-    strcpy(orquesta[0].nombre,"Metallica");
-    strcpy(orquesta[0].lugar,"San Francisco");
-    orquesta[0].tipo = 1;
-    generadorCodigoOrquesta++;
-
-    orquesta[1].idOrquesta=2;
-    orquesta[1].isEmpty=0;
-    strcpy(orquesta[1].nombre,"Grande");
-    strcpy(orquesta[1].lugar,"Cordoba");
-    orquesta[1].tipo = 2;
-    generadorCodigoOrquesta++;
-
-    orquesta[2].idOrquesta=3;
-    orquesta[2].isEmpty=0;
-    strcpy(orquesta[2].nombre,"Magnifica");
-    strcpy(orquesta[2].lugar,"La Matanza");
-    orquesta[2].tipo = 3;
-    generadorCodigoOrquesta++;
-
-    orquesta[3].idOrquesta=4;
-    orquesta[3].isEmpty=0;
-    strcpy(orquesta[3].nombre,"Callejera");
-    strcpy(orquesta[3].lugar,"Boedo");
-    orquesta[3].tipo = 1;
-    generadorCodigoOrquesta++;
-
-    instrumento[0].idInstrumento=1;
-    instrumento[0].isEmpty=0;
-    strcpy(instrumento[0].nombre,"Guitarra");
-    instrumento[0].tipo = 1;
-    generadorCodigoInstrumento++;
-
-    instrumento[1].idInstrumento=2;
-    instrumento[1].isEmpty=0;
-    strcpy(instrumento[1].nombre,"Bateria");
-    instrumento[1].tipo = 4;
-    generadorCodigoInstrumento++;
-
-    instrumento[2].idInstrumento=3;
-    instrumento[2].isEmpty=0;
-    strcpy(instrumento[2].nombre,"Flauta traverza");
-    instrumento[2].tipo = 3;
-    generadorCodigoInstrumento++;
-
-    instrumento[3].idInstrumento=4;
-    instrumento[3].isEmpty=0;
-    strcpy(instrumento[3].nombre,"Violin");
-    instrumento[3].tipo = 1;
-    generadorCodigoInstrumento++;
-
-    musico[0].idMusico=1;
-    musico[0].isEmpty=0;
-    strcpy(musico[0].nombre,"Fabian");
-    strcpy(musico[0].apellido,"Rolon");
-    musico[0].edad = 30;
-    musico[0].idOrquesta = 1;
-    musico[0].idInstrumento = 1;
-    generadorCodigoMusico++;
-
-    musico[1].idMusico=2;
-    musico[1].isEmpty=0;
-    strcpy(musico[1].nombre,"Marcelo");
-    strcpy(musico[1].apellido,"Menendez");
-    musico[1].edad = 52;
-    musico[1].idOrquesta = 2;
-    musico[1].idInstrumento = 4;
-    generadorCodigoMusico++;
-
-    musico[2].idMusico=3;
-    musico[2].isEmpty=0;
-    strcpy(musico[2].nombre,"Lucas");
-    strcpy(musico[2].apellido,"Barua");
-    musico[2].edad = 33;
-    musico[2].idOrquesta = 3;
-    musico[2].idInstrumento = 2;
-    generadorCodigoMusico++;
-
-    musico[3].idMusico=4;
-    musico[3].isEmpty=0;
-    strcpy(musico[3].nombre,"Leandro");
-    strcpy(musico[3].apellido,"Gonzales");
-    musico[3].edad = 27;
-    musico[3].idOrquesta = 1;
-    musico[3].idInstrumento = 3;
-    generadorCodigoMusico++;
+    harcodeo(orquesta, instrumento, musico);
 
         while (seguir == 's')
         {
@@ -255,16 +173,35 @@ int main()
             case 13:
                 do
                 {
-                    printf("\n1-Ordenar por nombre y apellido ascendente");
-                    printf("\n2-Salir\n\n");
+                    printf("\na)-Buscar orquestas por lugar");
+                    printf("\nb)-Lista de musicos menores de 25 años");
+                    printf("\nc)-Orquesta con menos de 6 musicos");
+                    printf("\nf)-Orquesta con menos musicos");
+                    printf("\ng)-Promedio de instrumentos por orquesta");
+                    printf("\ni)-Salir\n\n");
 
-                    utn_getUnsignedInt("\n\t\tIngrese opcion: ","Ingreso incorrecto\n",1,3,2,&opcionInforme);
+
+                    utn_getChar("\n\t\tIngrese opcion: ", "Ingreso incorrecto",1,2,2,&opcionInforme);
                     switch (opcionInforme)
                     {
-                    case 1:
-                        musico_ordenarPorDobleCriterio(musico, CANTIDAD_MUSICO,1,0);
+                    case 'a':
+                        inf_orquestasDeUnLugar(orquesta, CANTIDAD_ORQUESTA);
                         break;
-                    case 2:
+                    case 'b':
+                        inf_menosDe25(musico, orquesta, instrumento, CANTIDAD_MUSICO,CANTIDAD_ORQUESTA,CANTIDAD_INSTRUMENTO);
+                        break;
+                    case 'c':
+                        inf_contadorMusicosOrquesta(contadorMusico, orquesta,musico, CANTIDAD_MUSICO, CANTIDAD_ORQUESTA);
+                        menosDe6musicos(contadorMusico,orquesta, CANTIDAD_ORQUESTA);
+                        break;
+                    case 'f':
+                        inf_contadorMusicosOrquesta(contadorMusico, orquesta,musico, CANTIDAD_MUSICO, CANTIDAD_ORQUESTA);
+                        menosMusicos(contadorMusico,orquesta,CANTIDAD_ORQUESTA);
+                        break;
+                    case 'g':
+                        promedioInstrumentoPorOrquesta(contadorMusico, musico, CANTIDAD_ORQUESTA, CANTIDAD_MUSICO);
+                        break;
+                    case 'i':
                         salirListaInformes = 0;
                         break;
                     }

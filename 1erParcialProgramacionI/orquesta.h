@@ -21,5 +21,6 @@ int orq_alta(Orquesta *arrayOrquesta, int cantidad, int posLibre, int id);
 void orq_mostrarArray(Orquesta *arrayOrquesta, int cantidad);
 int orq_modificacion(Orquesta *arrayOrquesta, int cantidad);
 int orq_existeId (Orquesta *arrayOrquesta, int cantidad, int id);
+int orq_buscarEnArrayPorId2 (Orquesta *arrayOrquesta, int idOrquesta, int cantidad, int *orquestaEncontrada);
 
 

@@ -185,3 +185,20 @@ int orq_existeId (Orquesta *arrayOrquesta, int cantidad, int id)
     return retorno;
 }
 
+int orq_buscarEnArrayPorId2 (Orquesta *arrayOrquesta, int idOrquesta, int cantidad, int *orquestaEncontrada)
+{
+    int i;
+    int retorno = 1;
+
+        for(i=0; i < cantidad; i++)
+        {
+            if (arrayOrquesta[i].idOrquesta == idOrquesta)
+            {
+                retorno=0;
+                *orquestaEncontrada=i;
+                break;
+            }
+        }
+
+    return retorno;
+}
