@@ -7,7 +7,7 @@ typedef struct
     int cantMusico;
 }ContadorMusicos;
 
-void harcodeo(Orquesta *orquesta, Instrumento *instrumento, Musico *musico);
+void harcodeo(Orquesta *orquesta, Instrumento *instrumento, Musico *musico, int *generadorCodigoOrquesta, int *generadorCodigoInstrumento,  int *generadorCodigoMusico);
 int musico_ordenarPorDobleCriterio(Musico *arrayMusico,int size, int orderFirst, int orderSecond);
 int inf_contadorMusicosOrquesta(ContadorMusicos *arrayContadorMusicos, Orquesta *arrayOrquesta, Musico *arrayMusico, int cantidadMusico, int cantidadOrquesta);
 int inf_orquestasDeUnLugar(Orquesta *arrayOrquesta, int cantidadOrquesta);

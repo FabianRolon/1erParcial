@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-//#include <stdio_ext.h>
+#include <stdio_ext.h>
 #include <ctype.h>
 #include "instrumento.h"
 #include "orquesta.h"
@@ -12,13 +12,8 @@
 #define CANTIDAD_INSTRUMENTO 20
 #define CANTIDAD_MUSICO 1000
 
-void harcodeo(Orquesta *orquesta, Instrumento *instrumento, Musico *musico)
+void harcodeo(Orquesta *orquesta, Instrumento *instrumento, Musico *musico, int *generadorCodigoOrquesta, int *generadorCodigoInstrumento,  int *generadorCodigoMusico)
 {
-    int generadorCodigoOrquesta = 1;
-    int generadorCodigoInstrumento = 1;
-    int generadorCodigoMusico = 1;
-
-
     orquesta[0].idOrquesta=1;
     orquesta[0].isEmpty=0;
     strcpy(orquesta[0].nombre,"Orquesta1");

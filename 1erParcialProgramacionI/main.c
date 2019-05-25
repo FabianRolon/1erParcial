@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-//#include <stdio_ext.h>
+#include <stdio_ext.h>
 #include "orquesta.h"
 #include "instrumento.h"
 #include "utn.h"
@@ -47,7 +47,7 @@ int main()
         printf("Sistema inicializado correctamente\n\n\n");
     }
 
-    harcodeo(orquesta, instrumento, musico);
+    harcodeo(orquesta, instrumento, musico, &generadorCodigoOrquesta, &generadorCodigoInstrumento, &generadorCodigoMusico);
 
         while (seguir == 's')
         {
@@ -188,20 +188,16 @@ int main()
                         inf_orquestasDeUnLugar(orquesta, CANTIDAD_ORQUESTA);
                         break;
                     case 'b':
-                        inf_contadorMusicosOrquesta(contadorMusico, orquesta,musico, CANTIDAD_MUSICO, CANTIDAD_ORQUESTA);
                         inf_menosDe25(musico, orquesta, instrumento, CANTIDAD_MUSICO,CANTIDAD_ORQUESTA,CANTIDAD_INSTRUMENTO);
                         inf_mostrarArrayContadorMusico(contadorMusico, CANTIDAD_ORQUESTA);
                         break;
                     case 'c':
-                        inf_contadorMusicosOrquesta(contadorMusico, orquesta,musico, CANTIDAD_MUSICO, CANTIDAD_ORQUESTA);
                         menosDe6musicos(contadorMusico,orquesta, CANTIDAD_ORQUESTA);
                         break;
                     case 'f':
-                        inf_contadorMusicosOrquesta(contadorMusico, orquesta,musico, CANTIDAD_MUSICO, CANTIDAD_ORQUESTA);
                         menosMusicos(contadorMusico,orquesta,CANTIDAD_ORQUESTA);
                         break;
                     case 'g':
-                        inf_contadorMusicosOrquesta(contadorMusico, orquesta,musico, CANTIDAD_MUSICO, CANTIDAD_ORQUESTA);
                         promedioInstrumentoPorOrquesta(contadorMusico, musico, CANTIDAD_ORQUESTA, CANTIDAD_MUSICO);
                         break;
                     case 'i':
